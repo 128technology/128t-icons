@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>128T Icons</title>
+  <meta name="description" content="Icons for the 128T product.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      box-sizing: border-box;
+    }
+    h1 {
+      text-align: center;
+    }
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 940px;
+    }
+    .item {
+      float: left;
+      width: calc( 100% / 3 - 20px );
+      margin: 10px;
+      padding: 10px 0;
+    }
+    .item:hover {
+      box-shadow: 0px 0px 4px #b0b0b0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .inner {
+      display: flex;
+    }
+    .details {
+      white-space: nowrap;
+      overflow: hidden;
+      word-wrap: none;
+      text-overflow: ellipsis;
+      flex: 1;
+    }
+    canvas {
+      width: 80px;
+    }
+    @media (max-width: 940px) {
+      .container {
+        width: 100%;
+      }
+      .item {
+        width: calc( 100% / 2 - 20px );
+      }
+    }
+    @media (max-width: 540px) {
+      .item {
+        width: 100%;
+      }
+    }
+  </style>
+  <script>
+    window.onload = () => {
+      new Vue({
+        el: '#content',
+        data: function() {
+          return {
+            error: null,
+            loading: true
+          };
+        },
+        methods: {
+          getGlyph(idx) {
+            return this.font.glyphs.get(idx);
+          },
+          getGlyphs() {
+            if (this.font) {
+              return this.font.glyphs;
+            } else {
+              return {};
+            }
+          }
+        },
+        mounted: function() {
+          opentype.load('../128t.ttf', (err, font) => {
+            this.loading = false;
+
+            if (err) {
+              this.error = err;
+            } else {
+              this.font = font;
+              this.$forceUpdate();
+            }
+          });
+        },
+        updated: function() {
+          this.$nextTick(() => {
+            const h = 50;
+            const w = 100;
+            const head = this.font.tables.head;
+            const maxHeight = head.yMax - head.yMin;
+            const fontScale = Math.min(w/(head.xMax - head.xMin), h/maxHeight);
+            const fontSize = fontScale * this.font.unitsPerEm;
+            const fontBaseline = h * head.yMax / maxHeight;
+
+            for (let i = 0; i < this.font.glyphs.length; i++) {
+              const glyph = this.font.glyphs.get(i);
+              const glyphWidth = glyph.advanceWidth * fontScale;
+              const xmin = (w - glyphWidth)/2;
+              const ref = this.$refs['canvas' + glyph.name];
+              if (ref) {
+                glyph.draw(ref[0].getContext('2d'), xmin, fontBaseline, fontSize);
+              }
+            }
+          });
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+    <div id="content" v-cloak>
+      <div class="container">
+        <h1>128 Technology Icons</h1>
+        <div v-if="error">Error: {{ error }}</div>
+        <div class="item" v-else v-for="(glyph) in getGlyphs().glyphs" v-if="glyph.unicode > 0">
+          <div class="inner">
+            <canvas :ref="'canvas' + glyph.name" width="100" height="50"></canvas>
+            <div class="details">
+              <div>{{ glyph.name }}</div>
+              <div>U{{ glyph.unicode }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
