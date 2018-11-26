@@ -1,4 +1,4 @@
-# 128T Icon Font
+# 128T Icon Font [![Build Status](https://travis-ci.org/128technology/128t-icons.svg?branch=master)](https://travis-ci.org/128technology/128t-icons)
 
 This repository contains the icon font for 128 Technology's 128T router.
 
