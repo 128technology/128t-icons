@@ -1,5 +1,5 @@
 {
-  "name": "128t-icons",
+  "name": "@128technology/icons",
   "version": "1.0.0",
   "description": "This repository contains the icon font for 128 Technology's 128T router.",
   "repository": {
@@ -10,5 +10,12 @@
   "bugs": {
     "url": "https://github.com/128technology/128t-icons/issues"
   },
-  "homepage": "https://github.com/128technology/128t-icons#readme"
+  "homepage": "https://github.com/128technology/128t-icons#readme",
+  "files": [
+    "128t.css",
+    "128t.eot",
+    "128t.svg",
+    "128t.ttf",
+    "128t.woff"
+  ]
 }
