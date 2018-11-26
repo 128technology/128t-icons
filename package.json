@@ -1,7 +1,7 @@
 {
   "name": "@128technology/icons",
   "version": "1.0.0",
-  "description": "This repository contains the icon font for 128 Technology's 128T router.",
+  "description": "The icon font for 128 Technology's 128T router.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/128technology/128t-icons.git"
