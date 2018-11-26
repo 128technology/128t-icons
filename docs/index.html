@@ -82,7 +82,7 @@
           }
         },
         mounted: function() {
-          opentype.load('../128t.ttf', (err, font) => {
+          opentype.load('https://github.com/128technology/128t-icons/raw/master/128t.ttf', (err, font) => {
             this.loading = false;
 
             if (err) {
