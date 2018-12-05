@@ -4,7 +4,6 @@
 	src:url('./128t.eot') format('embedded-opentype'),
 		url('./128t.ttf') format('truetype'),
 		url('./128t.woff') format('woff'),
-		url('./128t.woff2') format('woff2'),
 		url('./128t.svg') format('svg');
 	font-style: normal;
   font-weight: normal;
