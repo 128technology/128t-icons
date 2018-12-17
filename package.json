@@ -11,14 +11,19 @@
     "url": "https://github.com/128technology/128t-icons/issues"
   },
   "scripts": {
-    "test": "true"
+    "test": "true",
+    "generateIcons": "npx @svgr/cli -d icons raw --ext tsx && tsc",
+    "build": "icon-font-generator ./raw/*.svg -n t128 -o ./font --prefix ic --selector ic && npm run generateIcons"
   },
   "homepage": "https://github.com/128technology/128t-icons#readme",
   "files": [
-    "128t.css",
-    "128t.eot",
-    "128t.svg",
-    "128t.ttf",
-    "128t.woff"
-  ]
+    "fonts",
+    "icons"
+  ],
+  "dependencies": {
+    "@types/react": "^16.7.17",
+    "icon-font-generator": "^2.1.8",
+    "react": "^16.6.3",
+    "typescript": "^3.2.2"
+  }
 }

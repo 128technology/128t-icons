@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./icons",
+    "jsx": "preserve",
+    "module": "commonjs",
+    "declaration": true
+  },
+  "include": [
+    "./icons/*"
+  ],
+  "exclude": ["node_modules"]
+}
