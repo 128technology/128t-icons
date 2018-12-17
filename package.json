@@ -6,21 +6,28 @@
     "type": "git",
     "url": "git+https://github.com/128technology/128t-icons.git"
   },
+  "main": "index.js",
+  "types": "index.d.ts",
   "author": "128 Technology",
   "bugs": {
     "url": "https://github.com/128technology/128t-icons/issues"
   },
   "scripts": {
     "test": "true",
-    "generateIcons": "npx @svgr/cli -d icons raw --ext tsx && tsc",
-    "build": "icon-font-generator ./raw/*.svg -n t128 -o ./font --prefix ic --selector ic && npm run generateIcons"
+    "cleanup": "node cleanup.js",
+    "build:ts": "tsc --outDir ./",
+    "build:components": "npx @svgr/cli -d ./ raw --ext tsx --icon && node createIndex.js",
+    "build": "icon-font-generator ./raw/*.svg -n t128 -o ./fonts --prefix ic --selector ic --center --height 512 --descent=128 && npm run build:components && npm run build:ts"
   },
   "homepage": "https://github.com/128technology/128t-icons#readme",
   "files": [
     "fonts",
-    "icons"
+    "*.tsx",
+    "*.js",
+    "*.d.ts"
   ],
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@types/react": "^16.7.17",
     "icon-font-generator": "^2.1.8",
     "react": "^16.6.3",

@@ -1,12 +1,16 @@
 {
   "compilerOptions": {
-    "outDir": "./icons",
-    "jsx": "preserve",
-    "module": "commonjs",
-    "declaration": true
+    "jsx": "react",
+    "target": "es5",
+    "noResolve": false,
+    "lib": ["es5", "es6", "dom"],
+    "module": "amd",
+    "declaration": true,
+    "moduleResolution": "node"
   },
   "include": [
-    "./icons/*"
+    "./*.tsx",
+    "./*.ts"
   ],
   "exclude": ["node_modules"]
 }
