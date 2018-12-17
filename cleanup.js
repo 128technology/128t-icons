@@ -14,12 +14,28 @@ fs.readdir(READ_PATH, (err, files) => {
     return console.error('Error reading directory', err);
   }
 
-  files
+  const unlinkables = files
     .map(x => path.basename(x, '.svg'))
     .reduce((acc, x) => {
       const fileName = path.join(UNLINK_PATH, titleCase(x));
       return acc.concat([fileName + '.tsx', fileName + '.js', fileName + '.d.ts']);
     }, [])
     .concat(['index.ts', 'index.js', 'index.d.ts'])
-    .forEach(fs.unlinkSync);
+    .filter(x => {
+      try {
+        return fs.statSync(x).isFile();
+      } catch(e) {
+        return false;
+      }
+    })
+
+  unlinkables.forEach(x => {
+    fs.unlinkSync(x);
+    console.log('Deleted: ' + x);
+  });
+
+  if (unlinkables.length > 0) {
+    console.log('You\'re trying to commit generated items. Please re-stage.')
+    process.exit(1);
+  }
 });

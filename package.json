@@ -26,10 +26,14 @@
     "*.js",
     "*.d.ts"
   ],
+  "pre-commit": [
+    "cleanup"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^16.7.17",
     "icon-font-generator": "^2.1.8",
+    "pre-commit": "^1.2.2",
     "react": "^16.6.3",
     "typescript": "^3.2.2"
   }
