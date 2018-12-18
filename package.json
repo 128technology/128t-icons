@@ -1,24 +1,41 @@
 {
   "name": "@128technology/icons",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "The icon font for 128 Technology's 128T router.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/128technology/128t-icons.git"
   },
+  "main": "index.js",
+  "types": "index.d.ts",
   "author": "128 Technology",
   "bugs": {
     "url": "https://github.com/128technology/128t-icons/issues"
   },
   "scripts": {
-    "test": "true"
+    "test": "true",
+    "prepublishOnly": "npm run build",
+    "cleanup": "node cleanup.js",
+    "build:ts": "tsc --outDir ./",
+    "build:components": "npx @svgr/cli -d ./ raw --ext tsx --icon && node createIndex.js",
+    "build": "icon-font-generator ./raw/*.svg -n t128 -o ./fonts --prefix ic --selector ic --center --height 512 --descent=128 && npm run build:components && npm run build:ts"
   },
   "homepage": "https://github.com/128technology/128t-icons#readme",
   "files": [
-    "128t.css",
-    "128t.eot",
-    "128t.svg",
-    "128t.ttf",
-    "128t.woff"
-  ]
+    "fonts",
+    "*.tsx",
+    "*.js",
+    "*.d.ts"
+  ],
+  "pre-commit": [
+    "cleanup"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^16.7.17",
+    "icon-font-generator": "^2.1.8",
+    "pre-commit": "^1.2.2",
+    "react": "^16.6.3",
+    "typescript": "^3.2.2"
+  }
 }
