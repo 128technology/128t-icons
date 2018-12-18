@@ -4,12 +4,11 @@ node_js:
 install:
 - npm install
 deploy:
-  matrix:
-  - provider: npm
-    email: 128techadmin@128technology.com
-    skip_cleanup: true
-    api_key:
-      secure: gpVR+TH5t0yPUuhCdfXM4N8HR8zUZ2uCpPZwhp77xqsiDKdOBTjakFY2T+GNDnjymdDF923xW/YU2DTH3/b2CvcWFALp21jnvjISU1lPTyZkVY1IpI/c2XhMJLo7dwsLF/4U4Ym4HWHpuwn41B9PS5BRqltnQJD2Ng68KqMsbjCHOhqMUI78mNrC1F9PNKLBK6QOcX/6DPkey90J8Kg3qd1iuLDxYuo4S9LdSSo4bcnw0pidkgTmLH1WktUVkf0oMGlX3IGnjD6FyqemjEycsOHMzjmP+TSk0Ht6yoK436OvzpDyonkT+BRO374gbU3aGYWjt5Nm1q0Mo8F0r+UuMNwD1fVVnhoSamztP4o9RK03qK/bWwk2ngobO+VJffaj58e/Pzzw2lK9d2fzfTgQeJa8bo2vwJgKQTDxNN4NKmUmRFWu9EHZzWuCkm2Rv4oez5EUwwpU4ADEHAw4FJXk/lSEm632bVuPY4brrL34o+0nmHrtdqHOIMqMoOy6xFZttVpYEP8Ca82tWNVnJVFZtZvptR3SnecWTRoMTqVRoThUsCetMQhlXGZ/86HymBLa1/PNVbLcowhStdJnIkpIZgUmd9RyQhf2CqqhvBxJcAlJ18s1nzNzNC9fkLwDcUSf8rcb2zDnBADpVvFTvceu9uNGuBJqaJRJcUUUfvnRLm8=
-    on:
-      repo: 128technology/128t-icons
-      branch: master
+- provider: npm
+  email: 128techadmin@128technology.com
+  skip_cleanup: true
+  api_key:
+    secure: gpVR+TH5t0yPUuhCdfXM4N8HR8zUZ2uCpPZwhp77xqsiDKdOBTjakFY2T+GNDnjymdDF923xW/YU2DTH3/b2CvcWFALp21jnvjISU1lPTyZkVY1IpI/c2XhMJLo7dwsLF/4U4Ym4HWHpuwn41B9PS5BRqltnQJD2Ng68KqMsbjCHOhqMUI78mNrC1F9PNKLBK6QOcX/6DPkey90J8Kg3qd1iuLDxYuo4S9LdSSo4bcnw0pidkgTmLH1WktUVkf0oMGlX3IGnjD6FyqemjEycsOHMzjmP+TSk0Ht6yoK436OvzpDyonkT+BRO374gbU3aGYWjt5Nm1q0Mo8F0r+UuMNwD1fVVnhoSamztP4o9RK03qK/bWwk2ngobO+VJffaj58e/Pzzw2lK9d2fzfTgQeJa8bo2vwJgKQTDxNN4NKmUmRFWu9EHZzWuCkm2Rv4oez5EUwwpU4ADEHAw4FJXk/lSEm632bVuPY4brrL34o+0nmHrtdqHOIMqMoOy6xFZttVpYEP8Ca82tWNVnJVFZtZvptR3SnecWTRoMTqVRoThUsCetMQhlXGZ/86HymBLa1/PNVbLcowhStdJnIkpIZgUmd9RyQhf2CqqhvBxJcAlJ18s1nzNzNC9fkLwDcUSf8rcb2zDnBADpVvFTvceu9uNGuBJqaJRJcUUUfvnRLm8=
+  on:
+    repo: 128technology/128t-icons
+    branch: master
