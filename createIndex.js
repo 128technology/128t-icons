@@ -14,6 +14,7 @@ fs.readdir(PATH, (err, files) => {
   }
 
   const out = files
+    .filter(x => x.indexOf('.svg') !== -1)
     .map(x => path.basename(x, '.svg'))
     .map(x => `export { default as ${titleCase(x)} } from './${titleCase(x)}';`)
     .join('\n');
