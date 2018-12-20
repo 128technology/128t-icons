@@ -18,7 +18,7 @@
     "cleanup": "rm -rf fonts && node cleanup.js",
     "build:ts": "tsc --outDir ./",
     "build:components": "npx @svgr/cli -d ./ raw --ext tsx --icon && node createIndex.js",
-    "build:font": "icon-font-generator ./raw/*.svg -n t128 -o ./fonts -p ic --center --height 512 --descent 128 --csstp ./css.hbs --htmltp ./html.hbs",
+    "build:font": "icon-font-generator ./raw/*.svg -n t128 -o ./fonts -p ic --csstp ./css.hbs --htmltp ./html.hbs --mono",
     "build": "mkdir -p fonts && npm run build:font && npm run build:components && npm run build:ts"
   },
   "homepage": "https://github.com/128technology/128t-icons#readme",

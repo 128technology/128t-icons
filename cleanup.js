@@ -1,8 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 
-const READ_PATH = './raw';
-const UNLINK_PATH = './';
+const READ_PATH = path.join(__dirname, 'raw');
+const UNLINK_PATH = __dirname;
 
 const titleCase = fileName => fileName
   .split('-')

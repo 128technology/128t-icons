@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M486 60c0-37-30-64-65-64H91C56-4 26 23 26 60v328c0 37 30 64 65 64h328c37 0 64-29 64-64zM121 388V241H86v-30h35V55h29v154h35v30h-35v147zm119 0V117h-35V87h35V55h30v30h34v30h-34v271zm188-27h-34v27h-30v-27h-35v-30h35V55h30v276h34z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<path d="M512,73.2C512,32.1,478.6,2,439.7,2H72.3C33.4,2,0,32.1,0,73.2v365.1c0,41.2,33.4,71.2,72.3,71.2h365.1
+	c41.2,0,74.2-32.3,74.2-71.2L512,73.2z M105.7,438.3V274.7h-39v-33.4h39V67.7H138v171.4h39v33.4h-39v163.6L105.7,438.3z
+	 M238.2,438.3V136.7h-39v-33.4h39V67.7h33.4v33.4h37.8v33.4h-37.8v301.6L238.2,438.3z M447.4,408.3h-37.8v30.1h-33.4v-30.1h-39
+	v-33.4h39V67.7h33.4v307.2h37.8V408.3z"/>
+</svg>
