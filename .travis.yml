@@ -12,3 +12,10 @@ deploy:
   on:
     repo: 128technology/128t-icons
     branch: master
+- provider: pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/fonts
+  on:
+    branch: master

@@ -1,6 +1,6 @@
 {
   "name": "@128technology/icons",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "The icon font for 128 Technology's 128T router.",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
     "cleanup": "rm -rf fonts && node cleanup.js",
     "build:ts": "tsc",
     "build:components": "npx @svgr/cli -d ./dist raw --ext tsx --icon && node createIndex.js",
-    "build:font": "icon-font-generator ./raw/*.svg -n t128 -o ./dist/fonts -p ic --csstp ./css.hbs --htmltp ./html.hbs --mono",
+    "build:font": "icon-font-generator ./raw/*.svg -n t128 -o ./dist/fonts -p ic --csstp ./css.hbs --htmltp ./html.hbs --htmlpath ./dist/fonts/index.html --mono",
     "build": "mkdir -p dist/fonts && npm run build:font && npm run build:components && npm run build:ts"
   },
   "homepage": "https://github.com/128technology/128t-icons#readme",
