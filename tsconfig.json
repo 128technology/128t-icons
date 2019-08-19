@@ -6,11 +6,12 @@
     "lib": ["es5", "es6", "dom"],
     "module": "amd",
     "declaration": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "outDir": "dist"
   },
   "include": [
-    "./*.tsx",
-    "./*.ts"
+    "./dist/*.tsx",
+    "./dist/*.ts"
   ],
   "exclude": ["node_modules"]
 }

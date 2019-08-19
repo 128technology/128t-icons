@@ -6,8 +6,8 @@
     "type": "git",
     "url": "git+https://github.com/128technology/128t-icons.git"
   },
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "128 Technology",
   "bugs": {
     "url": "https://github.com/128technology/128t-icons/issues"
@@ -16,17 +16,15 @@
     "test": "true",
     "prepublishOnly": "npm run build",
     "cleanup": "rm -rf fonts && node cleanup.js",
-    "build:ts": "tsc --outDir ./",
-    "build:components": "npx @svgr/cli -d ./ raw --ext tsx --icon && node createIndex.js",
-    "build:font": "icon-font-generator ./raw/*.svg -n t128 -o ./fonts -p ic --csstp ./css.hbs --htmltp ./html.hbs --mono",
-    "build": "mkdir -p fonts && npm run build:font && npm run build:components && npm run build:ts"
+    "build:ts": "tsc",
+    "build:components": "npx @svgr/cli -d ./dist raw --ext tsx --icon && node createIndex.js",
+    "build:font": "icon-font-generator ./raw/*.svg -n t128 -o ./dist/fonts -p ic --csstp ./css.hbs --htmltp ./html.hbs --mono",
+    "build": "mkdir -p dist/fonts && npm run build:font && npm run build:components && npm run build:ts"
   },
   "homepage": "https://github.com/128technology/128t-icons#readme",
+  "sideEffects": false,
   "files": [
-    "fonts",
-    "*.tsx",
-    "*.js",
-    "*.d.ts"
+    "dist"
   ],
   "pre-commit": [
     "cleanup"
