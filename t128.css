@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "t128";
+    src: url("./t128.eot?07b595c9cf44adfacf259863fd3d8074?#iefix") format("embedded-opentype"),
+url("./t128.woff2?07b595c9cf44adfacf259863fd3d8074") format("woff2"),
+url("./t128.woff?07b595c9cf44adfacf259863fd3d8074") format("woff"),
+url("./t128.ttf?07b595c9cf44adfacf259863fd3d8074") format("truetype"),
+url("./t128.svg?07b595c9cf44adfacf259863fd3d8074#t128") format("svg");
+}
+
+.ic {
+    font-family: t128 !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ic.ic-brand-mark:before {
+    content: "\f101";
+}
+.ic.ic-cli:before {
+    content: "\f102";
+}
+.ic.ic-company-logo:before {
+    content: "\f103";
+}
+.ic.ic-conductor:before {
+    content: "\f104";
+}
+.ic.ic-control:before {
+    content: "\f105";
+}
+.ic.ic-datacenter-database:before {
+    content: "\f106";
+}
+.ic.ic-graphql:before {
+    content: "\f107";
+}
+.ic.ic-gui:before {
+    content: "\f108";
+}
+.ic.ic-ha-router-outline:before {
+    content: "\f109";
+}
+.ic.ic-interchange:before {
+    content: "\f10a";
+}
+.ic.ic-network-address-range:before {
+    content: "\f10b";
+}
+.ic.ic-network-address:before {
+    content: "\f10c";
+}
+.ic.ic-network-aggregate-address:before {
+    content: "\f10d";
+}
+.ic.ic-network-cerouter:before {
+    content: "\f10e";
+}
+.ic.ic-network-device-interface:before {
+    content: "\f10f";
+}
+.ic.ic-network-dhcp-server:before {
+    content: "\f110";
+}
+.ic.ic-network-dns-server:before {
+    content: "\f111";
+}
+.ic.ic-network-dpi:before {
+    content: "\f112";
+}
+.ic.ic-network-ethernet:before {
+    content: "\f113";
+}
+.ic.ic-network-firewall:before {
+    content: "\f114";
+}
+.ic.ic-network-idp:before {
+    content: "\f115";
+}
+.ic.ic-network-interface:before {
+    content: "\f116";
+}
+.ic.ic-network-multilayer-switch:before {
+    content: "\f117";
+}
+.ic.ic-network-nac-server:before {
+    content: "\f118";
+}
+.ic.ic-network-next-hop:before {
+    content: "\f119";
+}
+.ic.ic-network-nic:before {
+    content: "\f11a";
+}
+.ic.ic-network-ntp-server:before {
+    content: "\f11b";
+}
+.ic.ic-network-pe-router:before {
+    content: "\f11c";
+}
+.ic.ic-network-policy-server:before {
+    content: "\f11d";
+}
+.ic.ic-network-port-range:before {
+    content: "\f11e";
+}
+.ic.ic-network-protocol:before {
+    content: "\f11f";
+}
+.ic.ic-network-redundancy-alt:before {
+    content: "\f120";
+}
+.ic.ic-network-redundancy-group-alt:before {
+    content: "\f121";
+}
+.ic.ic-network-redundancy-group:before {
+    content: "\f122";
+}
+.ic.ic-network-redundancy:before {
+    content: "\f123";
+}
+.ic.ic-network-router:before {
+    content: "\f124";
+}
+.ic.ic-network-routing-protocol:before {
+    content: "\f125";
+}
+.ic.ic-network-secure-network:before {
+    content: "\f126";
+}
+.ic.ic-network-secure:before {
+    content: "\f127";
+}
+.ic.ic-network-security-policy:before {
+    content: "\f128";
+}
+.ic.ic-network-server:before {
+    content: "\f129";
+}
+.ic.ic-network-switch:before {
+    content: "\f12a";
+}
+.ic.ic-network-syslog-server:before {
+    content: "\f12b";
+}
+.ic.ic-network-tap:before {
+    content: "\f12c";
+}
+.ic.ic-network-user:before {
+    content: "\f12d";
+}
+.ic.ic-network-virtual-router:before {
+    content: "\f12e";
+}
+.ic.ic-network-virtual-switch:before {
+    content: "\f12f";
+}
+.ic.ic-network-vpn-server:before {
+    content: "\f130";
+}
+.ic.ic-network-vpn-virtual:before {
+    content: "\f131";
+}
+.ic.ic-peer:before {
+    content: "\f132";
+}
+.ic.ic-priority:before {
+    content: "\f133";
+}
+.ic.ic-product-high-availability:before {
+    content: "\f134";
+}
+.ic.ic-product-node:before {
+    content: "\f135";
+}
+.ic.ic-rest:before {
+    content: "\f136";
+}
+.ic.ic-router:before {
+    content: "\f137";
+}
+.ic.ic-server-generic:before {
+    content: "\f138";
+}
+.ic.ic-slice:before {
+    content: "\f139";
+}
+.ic.ic-system-configuration:before {
+    content: "\f13a";
+}
+.ic.ic-system-health:before {
+    content: "\f13b";
+}
+.ic.ic-system-network:before {
+    content: "\f13c";
+}
+.ic.ic-system-service-class:before {
+    content: "\f13d";
+}
+.ic.ic-system-service-group:before {
+    content: "\f13e";
+}
+.ic.ic-system-service-policy:before {
+    content: "\f13f";
+}
+.ic.ic-system-service-route:before {
+    content: "\f140";
+}
+.ic.ic-system-service:before {
+    content: "\f141";
+}
+.ic.ic-system-session-type:before {
+    content: "\f142";
+}
+.ic.ic-system-subtenant:before {
+    content: "\f143";
+}
+.ic.ic-system-syslog:before {
+    content: "\f144";
+}
+.ic.ic-system-tenant:before {
+    content: "\f145";
+}
+.ic.ic-up-hierarchy-arrow:before {
+    content: "\f146";
+}
