@@ -1,10 +1,10 @@
 @font-face {
     font-family: "t128";
-    src: url("./t128.eot?cb744a81718d8c49f0b30c1504f285cf?#iefix") format("embedded-opentype"),
-url("./t128.woff2?cb744a81718d8c49f0b30c1504f285cf") format("woff2"),
-url("./t128.woff?cb744a81718d8c49f0b30c1504f285cf") format("woff"),
-url("./t128.ttf?cb744a81718d8c49f0b30c1504f285cf") format("truetype"),
-url("./t128.svg?cb744a81718d8c49f0b30c1504f285cf#t128") format("svg");
+    src: url("./t128.eot?d705525c881302ebdbbba5fa211a84a5?#iefix") format("embedded-opentype"),
+url("./t128.woff2?d705525c881302ebdbbba5fa211a84a5") format("woff2"),
+url("./t128.woff?d705525c881302ebdbbba5fa211a84a5") format("woff"),
+url("./t128.ttf?d705525c881302ebdbbba5fa211a84a5") format("truetype"),
+url("./t128.svg?d705525c881302ebdbbba5fa211a84a5#t128") format("svg");
 }
 
 .ic {
