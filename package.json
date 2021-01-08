@@ -17,7 +17,7 @@
     "prepublishOnly": "npm run build",
     "cleanup": "rm -rf fonts && node cleanup.js",
     "build:ts": "tsc",
-    "build:components": "npx @svgr/cli -d ./dist raw --ext tsx --icon && node createIndex.js",
+    "build:components": "svgr -d ./dist --ext tsx --icon ./raw && node createIndex.js",
     "build:font": "icon-font-generator ./raw/*.svg -n t128 -o ./dist/fonts -p ic --csstp ./css.hbs --htmltp ./html.hbs --htmlpath ./dist/fonts/index.html --mono",
     "build": "mkdir -p dist/fonts && npm run build:font && npm run build:components && npm run build:ts"
   },
@@ -31,6 +31,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "@svgr/cli": "^5.3.0",
     "@types/react": "^16.7.17",
     "icon-font-generator": "^2.1.8",
     "pre-commit": "^1.2.2",
